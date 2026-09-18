@@ -11,7 +11,7 @@ function mincost(arr)
 	}
   for(let j=2; j<arr.length; j++){
 	  sum+=arr[j];
-	  arr2.push_back(sum);
+	  arr2.push(sum);
   }
 	for(let k=0; k<arr2.length; k++){
 		sum2+=arr2[k];
