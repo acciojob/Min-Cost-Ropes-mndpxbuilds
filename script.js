@@ -7,7 +7,7 @@ function mincost(arr)
 	let sum2 = 0;
 	arr.sort();
 	let arr2 = [];
-	for(let i=0; i<=1; i++){
+	for(let i=0; i<1; i++){
 			sample=arr[i]+arr[i+1];
 		arr2.push(sample);
 	}
