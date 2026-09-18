@@ -3,17 +3,20 @@ function mincost(arr)
 //write your code here
 // return the min cost
 	let sum = 0;
+	let sum2 = 0;
 	arr.sort();
 	let arr2 = [];
 	for(let i=0; i<arr.length; i++){
-		let r1 = arr[i]+arr[i+1];
-		r1+=i;
-		arr2.push_back(r1);
+			sum=arr[i]+arr[i+1];
 	}
-  for(let j=0; j<arr2.length; j++){
-	  sum+=arr2[j];
+  for(let j=2; j<arr.length; j++){
+	  sum+=arr[j];
+	  arr2.push_back(sum);
   }
-	return sum;
+	for(let k=0; k<arr2.length; k++){
+		sum2+=arr2[k];
+	}
+	return sum2;
 }
 
 module.exports=mincost;
