@@ -6,8 +6,8 @@ function mincost(arr)
 	let sum2 = 0;
 	arr.sort();
 	let arr2 = [];
-	for(let i=0; i<arr.length; i++){
-			sum=arr[i]+arr[i+1];
+	for(let i=0; i<2; i++){
+			sum+=arr[i];
 	}
   for(let j=2; j<arr.length; j++){
 	  sum+=arr[j];
