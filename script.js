@@ -2,24 +2,22 @@ function mincost(arr)
 { 
 //write your code here
 // return the min cost
-	let sample = 0;
-	//let sum = 0;
-	let sum2 = 0;
-	arr.sort();
-	let arr2 = [];
-	for(let i=0; i<1; i++){
-			sample=arr[i]+arr[i+1];
-		  arr2.push(sample);
+	let totalCost = 0;
+	arr.sort((a,b) => a - b);
+
+	while(arr.length > 1){
+	let first = arr.shift();
+	let second = arr.shift();
+
+	let sum = first+second;
+
+	totalCost+=sum;
+
+	arr.push(sum);
+	arr.sort((a,b) => a - b);
 	}
-  for(let j=2; j<arr.length; j++){
-	   sample = sample+arr[j];
-	  
-	  arr2.push(sample);
-  }
-	for(let k=0; k<arr2.length; k++){
-		sum2+=arr2[k];
-	}
-	return sum2;
+
+	return totalCost;
 }
 
 module.exports=mincost;
